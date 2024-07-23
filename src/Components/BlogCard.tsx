@@ -37,10 +37,10 @@ export default function BlogCard({imageUrl, categories, title, description}: Blo
             })}
             <h3>{title}</h3>
             <p>{description}</p>
-            <div style={readMoreStyle.container}>
+            <a style={readMoreStyle.container}>
                 <p style={readMoreStyle.text}>Read More</p>
                 <FaArrowRightLong style={readMoreStyle.icon}/>
-            </div>
+            </a>
         </div>
     </div>
   )
@@ -81,7 +81,8 @@ const readMoreStyle = {
     container: {
         color: '#4338CA',
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        cursor: 'pointer'
     },
     text: {
         margin: 0
